@@ -18,6 +18,38 @@ A command-line toolkit for Catalan natural language processing experiments using
 
 ## Installation
 
+0. Python3.11
+
+Some libaries (pyonmttok) require Python3.11 
+To install pyenv to manage multiple Python versions:
+```
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev \
+liblzma-dev python3-openssl
+
+curl https://pyenv.run | bash
+```
+
+Add this to ~/.bashrc and reload the terminal
+```
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+```
+
+Install Python 3.11 with pyenv
+```
+pyenv install 3.11
+```
+
+Set Python 3.11 for the current repository only
+```
+pyenv local 3.11
+python --version
+```
+
 1. Clone the repository:
 ```bash
 git clone <repository-url>

@@ -20,6 +20,7 @@ import click
 from mask import main as mask_main
 from pos import main as pos_main
 from ner import main as ner_main
+from trad import main as trad_main
 
 
 @click.group()
@@ -74,6 +75,24 @@ def ner(interactive, text):
         python main.py ner --text "Maria viu a Barcelona"
     """
     ner_main(text=text, interactive=interactive)
+
+
+@cli.command()
+@click.option('-i', '--interactive', is_flag=True,
+              help='Run in interactive mode - prompt user for input')
+@click.option('--text', type=str, default=None,
+              help='Text to translate')
+@click.option('--combination', type=str, default="fr-ca",
+              help='Chose a language combination')
+def trad(interactive, text, combination):
+    """Run TRAD (translation) experiment with Catalan Aina MT model.
+
+    Examples:
+        python main.py trad
+        python main.py trad -i
+        python main.py trad --text "Bienvenue en Catalogne"
+    """
+    trad_main(text=text, interactive=interactive, combination=combination)
 
 
 if __name__ == '__main__':

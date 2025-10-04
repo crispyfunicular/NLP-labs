@@ -87,5 +87,7 @@ def main(text=None, interactive=False):
         print(f"Model loaded! NER analysis for: {text}")
         preds = ner_tag(text, ner_pipeline)
         format_ner_output(preds)
+
+
 if __name__ == "__main__":
     main()
