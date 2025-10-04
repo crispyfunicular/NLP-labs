@@ -1,0 +1,8 @@
+# Core dependencies
+torch>=1.9.0
+transformers>=4.20.0
+click>=8.0.0
+
+# Optional dependencies for better performance
+# torch-audio  # Uncomment if using audio models
+# accelerate   # Uncomment for faster model loading
