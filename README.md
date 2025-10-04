@@ -7,6 +7,7 @@ A command-line toolkit for Catalan natural language processing experiments using
 - **Mask Filling**: Fill masked tokens in Catalan text using RoBERTa
 - **POS Tagging**: Part-of-speech tagging for Catalan text
 - **Named Entity Recognition (NER)**: Identify persons, locations, and organizations in Catalan text
+- **Machine Translation**: Translation to and from Catalan
 - **Interactive Mode**: Real-time experimentation with pre-loaded models
 - **Optimized Performance**: Efficient model loading and reuse
 
@@ -15,6 +16,7 @@ A command-line toolkit for Catalan natural language processing experiments using
 - **Mask Filling**: `PlanTL-GOB-ES/roberta-base-ca` - Official Catalan RoBERTa model
 - **POS Tagging**: `projecte-aina/roberta-base-ca-cased-pos` - Catalan POS tagging model
 - **NER**: `projecte-aina/roberta-base-ca-v2-cased-ner` - Catalan NER model
+- **TRAD**: `projecte-aina/aina-translator-xx-xx` - Catalan TRAD model
 
 ## Installation
 
@@ -141,6 +143,21 @@ python main.py ner -i
 Model loaded! NER analysis for: Joan Miró va néixer a Barcelona el 1893.
  Joan Miró           → PER        (score=0.97) [0-9]
  Barcelona           → LOC        (score=0.96) [22-31]
+```
+
+### Translation
+```bash
+# Default example
+python main.py trad
+
+# Custom text
+python main.py trad --text "Bienvenue en Catalogne !"
+
+# Interactive mode
+python main.py ner -i
+
+# Language combination
+python main.py ner --combination "es-ca" --text "Bienvenidos a Cataluña!"
 ```
 
 ## Entity Types
