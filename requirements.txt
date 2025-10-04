@@ -1,6 +1,13 @@
 # Core dependencies
 torch>=1.9.0
 transformers>=4.20.0
+huggingface_hub>=0.35.3
+
+# Translation
+ctranslate2>=1.20.1
+pyonmttok>=1.37.1
+
+# CLI
 click>=8.0.0
 
 # Optional dependencies for better performance
